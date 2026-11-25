@@ -1,0 +1,106 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@800;900&display=block&subset=vietnamese" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1440px;overflow:hidden;background:#000}
+body{position:relative;font-family:'Be Vietnam Pro',sans-serif}
+#speaker{position:absolute;left:0;top:0;width:1080px;height:720px;object-fit:cover}
+#speaker.hide{display:none}
+.pill{position:absolute;top:26px;left:50%;transform:translateX(-50%);background:#e0101a;color:#fff;white-space:nowrap;
+  font:800 36px 'Be Vietnam Pro';padding:8px 34px 8px 18px;border-radius:60px;display:flex;align-items:center;gap:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,.5);border:4px solid #fff}
+.yt{width:52px;height:36px;background:#fff;border-radius:10px;position:relative}
+.yt:after{content:"";position:absolute;left:20px;top:9px;border-left:16px solid #e0101a;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.col{position:absolute;left:22px;top:118px;width:150px;background:#ffe600;border-radius:10px;padding:8px 6px;
+  box-shadow:0 6px 18px rgba(0,0,0,.45);text-align:center}
+.col div{font:900 32px/1.2 'Be Vietnam Pro';color:#111;border-bottom:3px solid #111;padding:4px 0}
+.col div:last-child{border:none}
+.col .gap{height:16px;border:none;padding:0}
+#bottom{position:absolute;left:0;top:720px;width:1080px;height:720px;
+  background:radial-gradient(ellipse at 50% 35%,#7a0a12 0%,#3a0408 45%,#0b0102 100%)}
+#bottom:before{content:"";position:absolute;inset:0;
+  background:repeating-conic-gradient(from 0deg at 50% 30%,rgba(255,200,0,.06) 0 6deg,transparent 6deg 18deg)}
+.title{position:absolute;left:0;width:1080px;top:560px;text-align:center;transform:rotate(-4deg);z-index:5}
+.t1{font:400 112px/1 'Anton';color:#39ff14;letter-spacing:2px;
+  -webkit-text-stroke:6px #062b00;paint-order:stroke fill;text-shadow:0 0 22px rgba(57,255,20,.75),0 7px 0 #000}
+.t2wrap{display:inline-block;margin-top:10px;background:#e0101a;padding:4px 28px 8px;border:5px solid #fff;box-shadow:0 7px 0 #000}
+.t2{font:400 70px/1.05 'Anton';color:#ffe600;-webkit-text-stroke:4px #000;paint-order:stroke fill}
+.slash{position:absolute;height:11px;background:#e0101a;width:480px;border:3px solid #fff}
+#grid{position:absolute;top:868px;left:44px;width:992px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px 22px}
+.card{height:178px;border-radius:20px;background:linear-gradient(180deg,#2a0306,#120102);border:4px solid #a1121a;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.card .num{position:absolute;top:-16px;left:-12px;width:54px;height:54px;border-radius:50%;background:#ffe600;color:#000;
+  font:900 32px/48px 'Be Vietnam Pro';text-align:center;border:4px solid #000}
+.card .ico{font-size:70px;line-height:1;position:relative;font-family:'Noto Color Emoji'}
+.card .ico:after{content:"";position:absolute;inset:-11px;border:7px solid #ff1a1a;border-radius:50%;
+  background:linear-gradient(135deg,transparent 46%,#ff1a1a 46%,#ff1a1a 54%,transparent 54%)}
+.card .lbl{margin-top:16px;font:900 28px/1.05 'Be Vietnam Pro';color:#fff;text-align:center;text-transform:uppercase}
+.card.todo{opacity:.28;filter:grayscale(.7)}
+.card.on{border-color:#ffe600;transform:scale(1.07);box-shadow:0 0 32px rgba(255,230,0,.8);background:linear-gradient(180deg,#5a070d,#200204)}
+.card.on .lbl{color:#ffe600}
+.big{position:absolute;top:862px;left:60px;width:960px;height:378px;border-radius:28px;border:6px solid #ffe600;
+  background:linear-gradient(180deg,rgba(40,3,6,.9),rgba(10,1,2,.95));box-shadow:0 0 50px rgba(255,230,0,.45);
+  display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
+.flow{display:flex;align-items:center;gap:16px;font-family:'Noto Color Emoji'}
+.flow .e{font-size:74px}
+.flow .ar{font:900 58px 'Be Vietnam Pro';color:#ffe600}
+.flow .dna{font-size:116px;filter:drop-shadow(0 0 22px #39ff14)}
+.bigtxt{margin-top:16px;font:400 60px/1.08 'Anton';color:#fff;-webkit-text-stroke:3px #000;paint-order:stroke fill}
+.bigtxt b{color:#39ff14;font-weight:400}
+.bigsub{margin-top:8px;font:800 30px 'Be Vietnam Pro';color:#ffd0d0}
+.sub{position:absolute;left:30px;right:30px;top:1262px;height:100px;display:flex;align-items:center;justify-content:center;text-align:center;
+  font:800 42px/1.15 'Be Vietnam Pro';color:#fff;-webkit-text-stroke:7px #000;paint-order:stroke fill;z-index:6}
+.bar{position:absolute;left:0;bottom:0;width:1080px;height:72px;background:#ffe600;display:flex;align-items:center;justify-content:center;
+  font:400 42px 'Anton';color:#000;letter-spacing:1px;border-top:5px solid #000}
+/* ===== CÂN BẰNG: giữ bố cục to như bản cũ, chỉ kéo chữ vào trong (feed cắt ~60px trên/dưới, Reels cắt ~135px hai bên) ===== */
+.pill{top:68px}
+.col{left:120px;top:150px;width:136px}
+.col div{font-size:30px}
+.title{top:540px}
+.t1{font-size:108px}
+.t2{font-size:68px}
+#grid{top:850px;left:110px;width:860px;gap:16px 20px}
+.card{height:170px}
+.card .lbl{font-size:26px}
+.card .ico{font-size:64px}
+.big{top:850px;left:110px;width:860px;height:350px}
+.sub{left:110px;right:110px;top:1210px;height:90px;font-size:40px}
+.bar{bottom:auto;top:1306px;height:66px;font-size:40px;border-bottom:5px solid #000}
+</style></head>
+<body>
+<img id="speaker">
+<div class="pill"><span class="yt"></span>Clip 441 || 21/11/2026</div>
+<div class="col"><div>Sư Phụ</div><div>dạy</div><div class="gap"></div><div>6 điều</div><div>giữ</div><div>mình</div></div>
+<div id="bottom"></div>
+<div class="slash" style="left:-40px;top:556px;transform:rotate(-4deg)"></div>
+<div class="slash" style="right:-40px;top:808px;transform:rotate(-4deg)"></div>
+<div class="title"><div class="t1">6 ĐIỀU TỐI KỴ</div><div class="t2wrap"><div class="t2">KẺO BỊ BỎ BÙA NGẢI</div></div></div>
+
+<div id="grid"></div>
+
+<div class="big" id="dna">
+  <div class="flow"><span class="e">💇</span><span class="e">💅</span><span class="e">🩸</span><span class="e">👕</span><span class="ar">➜</span><span class="dna">🧬</span></div>
+  <div class="bigtxt">BÙA NGẢI <b>DÙNG DNA</b><br>CỦA CHÍNH MÌNH</div>
+  <div class="bigsub">Cõi vô hình đi theo đời sống hữu hình</div>
+</div>
+<div class="big" id="end">
+  <div class="flow"><span class="e">📿</span><span class="dna" style="filter:drop-shadow(0 0 28px #ffe600)">🙏</span><span class="e">🪷</span></div>
+  <div class="bigtxt">ĐỌC KINH LĂNG NGHIÊM<br><b>BẢO ĐẢM AN TOÀN</b></div>
+</div>
+
+<div class="sub" id="sub"></div>
+<div class="bar">SƯ PHỤ DẠY: 6 ĐIỀU GIỮ MÌNH – TRÁNH BÙA NGẢI</div>
+<script>
+const items=[["💇","Không cho<br>tóc"],["💅","Không cho<br>móng tay"],["🩸","Không cho<br>máu"],["👕","Không cho<br>quần áo cũ"],["🥤","Không ăn uống<br>đồ lạ"],["🫂","Không để<br>ôm ấp"]];
+const p=new URLSearchParams(location.search);
+const active=+(p.get('active')||0), mode=p.get('mode')||'grid';
+if(p.get("bg")) document.getElementById("speaker").src=p.get("bg"); else {document.getElementById("speaker").classList.add("hide");document.documentElement.style.background="transparent";document.body.style.background="transparent";}
+document.getElementById('sub').textContent=p.get('sub')||'';
+const g=document.getElementById('grid');
+items.forEach(([e,l],i)=>{const c=document.createElement('div');
+  c.className='card '+(i+1<active?'done':i+1==active?'on':'todo');
+  c.innerHTML=`<div class="num">${i+1}</div><div class="ico">${e}</div><div class="lbl">${l}</div>`;g.appendChild(c)});
+if(mode!=='grid'){g.style.display='none';document.getElementById(mode).style.display='flex'}
+</script>
+</body></html>
