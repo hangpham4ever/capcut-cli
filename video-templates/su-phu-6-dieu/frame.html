@@ -53,28 +53,20 @@ body{position:relative;font-family:'Be Vietnam Pro',sans-serif}
   font:800 42px/1.15 'Be Vietnam Pro';color:#fff;-webkit-text-stroke:7px #000;paint-order:stroke fill;z-index:6}
 .bar{position:absolute;left:0;bottom:0;width:1080px;height:72px;background:#ffe600;display:flex;align-items:center;justify-content:center;
   font:400 42px 'Anton';color:#000;letter-spacing:1px;border-top:5px solid #000}
-/* ===== SAFE ZONE: feed 4:5 cắt ~60px trên/dưới; Reels 9:16 cắt ~150px hai bên + nút phải-dưới ===== */
-.pill{top:84px;font-size:32px;padding:6px 28px 6px 16px}
-.col{left:162px;top:180px;width:124px}
-.col div{font-size:28px}
-.title{top:520px}
-.t1{font-size:96px}
-.t2{font-size:60px}
-.slash{width:300px}
-#grid{top:842px;left:160px;width:670px;gap:16px 18px}
-.card{height:158px;border-radius:16px}
-.card .num{width:46px;height:46px;font-size:26px;line-height:38px;top:-14px;left:-10px}
-.card .ico{font-size:54px}
-.card .ico:after{inset:-9px;border-width:6px}
-.card .lbl{margin-top:12px;font-size:22px}
-.big{top:842px;left:160px;width:670px;height:332px;border-width:5px}
-.flow .e{font-size:56px}.flow .dna{font-size:92px}.flow .ar{font-size:44px}
-.bigtxt{font-size:48px;margin-top:10px}
-.bigsub{font-size:24px}
-.sub{left:160px;right:250px;top:1188px;height:96px;font-size:34px;-webkit-text-stroke:6px #000}
-.bar{bottom:auto;top:1292px;height:62px;font-size:32px;border-bottom:5px solid #000}
-.bar{justify-content:flex-start}
-.bar span{display:block;width:670px;margin-left:160px;margin-right:auto;text-align:center}
+/* ===== CÂN BẰNG: giữ bố cục to như bản cũ, chỉ kéo chữ vào trong (feed cắt ~60px trên/dưới, Reels cắt ~135px hai bên) ===== */
+.pill{top:68px}
+.col{left:120px;top:150px;width:136px}
+.col div{font-size:30px}
+.title{top:540px}
+.t1{font-size:108px}
+.t2{font-size:68px}
+#grid{top:850px;left:110px;width:860px;gap:16px 20px}
+.card{height:170px}
+.card .lbl{font-size:26px}
+.card .ico{font-size:64px}
+.big{top:850px;left:110px;width:860px;height:350px}
+.sub{left:110px;right:110px;top:1210px;height:90px;font-size:40px}
+.bar{bottom:auto;top:1306px;height:66px;font-size:40px;border-bottom:5px solid #000}
 </style></head>
 <body>
 <img id="speaker">
@@ -98,7 +90,7 @@ body{position:relative;font-family:'Be Vietnam Pro',sans-serif}
 </div>
 
 <div class="sub" id="sub"></div>
-<div class="bar"><span>SƯ PHỤ DẠY: 6 ĐIỀU GIỮ MÌNH – TRÁNH BÙA NGẢI</span></div>
+<div class="bar">SƯ PHỤ DẠY: 6 ĐIỀU GIỮ MÌNH – TRÁNH BÙA NGẢI</div>
 <script>
 const items=[["💇","Không cho<br>tóc"],["💅","Không cho<br>móng tay"],["🩸","Không cho<br>máu"],["👕","Không cho<br>quần áo cũ"],["🥤","Không ăn uống<br>đồ lạ"],["🫂","Không để<br>ôm ấp"]];
 const p=new URLSearchParams(location.search);

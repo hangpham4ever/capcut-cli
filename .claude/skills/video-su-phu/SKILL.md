@@ -10,7 +10,7 @@ description: Làm video Facebook theo mẫu "Sư Phụ dạy" (trang Hang Pham) 
 Tóm tắt bắt buộc:
 1. Tải video người dùng gửi, chép lời bằng Whisper `--model medium --language vi`.
 2. Rút ra tựa đề + các ý chính từ lời Sư Phụ; hỏi lại chỗ nghe không rõ. Hỏi **số clip và ngày** cho nhãn `Clip <số> || <ngày>`. Luôn ghi **"Sư Phụ"**.
-3. Copy `frame.html` sang thư mục làm việc, sửa nội dung (tựa đề, cột vàng, thẻ, khung lớn, thanh vàng). Mọi chữ phải nằm trong **vùng an toàn x 160–830, y 80–1360** (khung 1080×1440).
+3. Copy `frame.html` sang thư mục làm việc, sửa nội dung (tựa đề, cột vàng, thẻ, khung lớn, thanh vàng). Mọi chữ phải nằm trong **vùng an toàn bản "cân bằng"** (xem HUONG-DAN.md: giữ bố cục to, chữ trong x 110–970, y 68–1372 của khung 1080×1440).
 4. Gửi **khung hình mẫu + ảnh mô phỏng bảng tin/Reels** để người dùng duyệt TRƯỚC khi ghép.
 5. Ghép video bằng ffmpeg theo hướng dẫn, gửi video + `.srt` + gợi ý chú thích Facebook. Nhắc người dùng tải về (container là tạm thời).
 

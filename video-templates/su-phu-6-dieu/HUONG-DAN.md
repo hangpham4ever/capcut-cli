@@ -12,12 +12,12 @@ Mẫu video đăng Facebook theo phong cách trang Hang Pham. Đọc file này t
 - Đoạn giải thích hoặc kết luận dùng khung lớn viền vàng (`mode=dna`, `mode=end`).
 - Video ngắn, chủ đề nóng, kết luận dứt khoát thì nhiều lượt xem nhất.
 
-## VÙNG AN TOÀN (bắt buộc, vì Facebook cắt video)
-- Bảng tin cắt về 4:5, **mất khoảng 60px ở trên và ở dưới**.
-- Reels cắt về 9:16, **mất khoảng 135–150px mỗi bên**. Các nút ❤️💬↗ che vùng **x 830–945, y 1000–1360**.
-- => Mọi chữ, thẻ và phụ đề phải nằm trong **x 160–830, y 80–1360**. Riêng phần trên (pill, tựa đề) được dùng tới x 930.
+## VÙNG AN TOÀN – bản "cân bằng" (người dùng chọn)
+Người dùng **thích bố cục to, đầy như bản đầu**, chỉ cần không bị tràn khi đăng. Đừng thu nhỏ quá.
+- Bảng tin cắt về 4:5, **mất khoảng 60px ở trên và ở dưới** => pill để từ y≥68, thanh vàng đặt ở y 1306–1372 (không sát đáy).
+- Reels cắt về 9:16, **mất khoảng 135px mỗi bên** => cột vàng để từ x≥120; thẻ, phụ đề, khung lớn đặt trong x 110–970. Mép thẻ ngoài cùng có thể bị cắt nhẹ trên Reels, chấp nhận được.
 - Chỉ phần nền (video, màu nền) được tràn ra ngoài.
-- Luôn tạo ảnh mô phỏng 3 kiểu hiển thị (khung đầy đủ / bảng tin crop 1080×1320 từ y=60 / Reels crop 810 rộng, x=135) để kiểm tra trước khi gửi.
+- Luôn tạo ảnh mô phỏng 3 kiểu hiển thị (khung đầy đủ / bảng tin crop 1080×1320 từ y=60 / Reels crop 810 rộng, x=135) để kiểm tra trước khi gửi. Xem `examples/kiem_tra_vung_an_toan.jpg`.
 
 ## Quy trình
 1. Tải video (Google Drive: `https://drive.usercontent.google.com/download?id=<ID>&export=download&confirm=t`; Facebook: `yt-dlp`).
