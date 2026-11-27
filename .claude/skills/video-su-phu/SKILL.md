@@ -12,6 +12,11 @@ description: Làm video Facebook theo mẫu "Sư Phụ dạy" (trang Hang Pham) 
 - **C "Thiên khải"** (nền vũ trụ, chữ vàng ánh kim, khung video viền vàng, thẻ "Ý k/N"; không ghi số clip/ngày): `video-templates/thien-khai/`
 Đọc thêm `video-templates/phong-cach-moi/HUONG-DAN.md` khi dùng A hoặc B, `video-templates/thien-khai/HUONG-DAN.md` khi dùng C.
 
+## ⭐ Người dùng đã dặn – luôn làm
+- **Bố cục rộng**, không thu nhỏ dồn vào giữa: khung video và thẻ rộng khoảng x 80–1000. Chữ quan trọng vẫn nằm trong vùng an toàn (xem `video-templates/thien-khai/HUONG-DAN.md`).
+- **Tựa đề luôn có hiệu ứng động** nổi bật (chữ rơi vào, vệt sáng quét, chữ "thở", sao lấp lánh hoặc chữ nhảy). Thẻ hoặc ý mới thì bật lên. Không để chữ đứng yên suốt video.
+- Ngoài người nói đang cử động, chữ trên màn hình cũng phải có chuyển động để người xem không thấy nhàm chán.
+
 Đọc và làm đúng theo `video-templates/su-phu-6-dieu/HUONG-DAN.md` (ở gốc repo). Mẫu thiết kế là `frame.html`, script dựng lớp chữ là `render-overlays.js` trong cùng thư mục. Xem `examples/` để biết khung đúng trông thế nào.
 
 Tóm tắt bắt buộc:
