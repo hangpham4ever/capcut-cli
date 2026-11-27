@@ -1,9 +1,15 @@
 ---
 name: video-su-phu
-description: Làm video Facebook theo mẫu "Sư Phụ dạy" (trang Hang Pham) — khung 3:4 hai tầng, tựa đề neon, thẻ minh họa đánh số, phụ đề tiếng Việt, chừa vùng an toàn Facebook. Dùng khi người dùng gửi video (link Google Drive/Facebook) và muốn dựng theo phong cách Sư Phụ / Clip <số>.
+description: Làm video Facebook theo mẫu "Sư Phụ dạy" (trang Hang Pham) — 3 phong cách (6 điều / So sánh 2 hình / Vì-Nên Xưa-Nay), khung 3:4, chữ nhảy, tựa đề neon, thẻ minh họa đánh số, phụ đề tiếng Việt, chừa vùng an toàn Facebook. Dùng khi người dùng gửi video (link Google Drive/Facebook) và muốn dựng theo phong cách Sư Phụ / Clip <số>.
 ---
 
 # Video "Sư Phụ dạy"
+
+**Có 3 phong cách — hỏi người dùng muốn dùng phong cách nào nếu họ chưa nói:**
+- **Mặc định "6 điều"** (danh sách đánh số, thẻ sáng dần): `video-templates/su-phu-6-dieu/`
+- **A "So sánh 2 hình"** (hộp vàng + câu móc ⁉️ chữ nhảy + 2 ô hình có nhãn xanh): `video-templates/phong-cach-moi/styleA.html`
+- **B "Vì/Nên – Xưa/Nay"** (người nói phủ kín khung, tựa xanh phát sáng chữ nhảy, "TẠI SAO !?", nhãn vàng + đoạn chữ): `video-templates/phong-cach-moi/styleB.html`
+Đọc thêm `video-templates/phong-cach-moi/HUONG-DAN.md` khi dùng A hoặc B.
 
 Đọc và làm đúng theo `video-templates/su-phu-6-dieu/HUONG-DAN.md` (ở gốc repo). Mẫu thiết kế là `frame.html`, script dựng lớp chữ là `render-overlays.js` trong cùng thư mục. Xem `examples/` để biết khung đúng trông thế nào.
 
