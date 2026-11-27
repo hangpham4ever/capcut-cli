@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800;900&family=Be+Vietnam+Pro:wght@500;700;800;900&display=block&subset=vietnamese" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1440px;overflow:hidden;position:relative;font-family:'Be Vietnam Pro';background:transparent}
+#bgl{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 32%,#24306e 0%,#0d1438 45%,#04061a 100%)}
+.stars{position:absolute;inset:0;background-image:
+ radial-gradient(1.6px 1.6px at 12% 18%,#fff8,transparent),radial-gradient(1.2px 1.2px at 82% 12%,#fff9,transparent),
+ radial-gradient(2px 2px at 70% 40%,#ffe9a8aa,transparent),radial-gradient(1.4px 1.4px at 25% 62%,#fff7,transparent),
+ radial-gradient(1.8px 1.8px at 90% 70%,#fff8,transparent),radial-gradient(1.2px 1.2px at 8% 85%,#fff6,transparent),
+ radial-gradient(1.5px 1.5px at 55% 92%,#ffe9a888,transparent),radial-gradient(1.3px 1.3px at 40% 8%,#fff8,transparent)}
+.halo{position:absolute;left:50%;top:540px;width:1100px;height:1100px;transform:translate(-50%,-50%);
+ background:repeating-conic-gradient(from 0deg,rgba(255,214,120,.07) 0 4deg,transparent 4deg 12deg);
+ -webkit-mask:radial-gradient(circle,#000 0 30%,transparent 62%)}
+.kick{position:absolute;top:74px;left:0;right:0;text-align:center;font:800 28px 'Be Vietnam Pro';letter-spacing:8px;color:#f3d27a}
+.kick:before,.kick:after{content:"";display:inline-block;width:90px;height:2px;background:linear-gradient(90deg,transparent,#f3d27a);vertical-align:middle;margin:0 18px}
+.kick:after{background:linear-gradient(90deg,#f3d27a,transparent)}
+.title{position:absolute;top:116px;left:110px;right:110px;text-align:center}
+.title div{font:900 46px/1.15 'Playfair Display';text-transform:uppercase;
+ background:linear-gradient(180deg,#fff6d0 0%,#f6d16b 45%,#c8902a 100%);-webkit-background-clip:text;color:transparent;
+ filter:drop-shadow(0 3px 0 #3a2400) drop-shadow(0 0 18px rgba(255,200,90,.45))}
+.title .big{font-size:80px;white-space:nowrap;display:inline-block}
+.chip{position:absolute;top:306px;left:50%;transform:translateX(-50%);white-space:nowrap;border:2px solid #f3d27a;border-radius:40px;
+ padding:6px 26px;font:700 30px 'Be Vietnam Pro';color:#fff;background:rgba(10,16,50,.7)}
+.frame{position:absolute;left:130px;top:392px;width:820px;height:470px;border-radius:26px;overflow:hidden;
+ border:5px solid #f3d27a;box-shadow:0 0 0 2px #7a5a10,0 0 40px rgba(255,200,90,.55)}
+.frame.cut{background:transparent}
+.card{position:absolute;left:130px;top:900px;width:820px;height:270px;border-radius:26px;
+ background:linear-gradient(160deg,rgba(40,52,120,.92),rgba(12,18,52,.95));border:3px solid #f3d27a;box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 30px rgba(255,210,120,.12);
+ display:flex;align-items:center;gap:26px;padding:0 34px 0 30px}
+.num{position:absolute;top:-32px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,#fff3c4,#e3a93a);color:#2a1a00;
+ font:900 30px 'Be Vietnam Pro';padding:8px 28px;border-radius:30px;border:3px solid #fff;letter-spacing:2px;box-shadow:0 4px 12px rgba(0,0,0,.5)}
+.ico{flex:0 0 150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:80px 'Noto Color Emoji';
+ background:radial-gradient(circle,#3a4ba0,#141c50);border:3px solid #f3d27a;box-shadow:0 0 26px rgba(255,210,120,.55)}
+.ct h2{font:900 42px/1.12 'Be Vietnam Pro';color:#fff;text-transform:uppercase}
+.ct h2 b{color:#ffd76a}
+.ct p{margin-top:12px;font:600 29px/1.3 'Be Vietnam Pro';color:#f6e3b0}
+.dots{position:absolute;top:1192px;left:0;right:0;display:flex;justify-content:center;gap:16px}
+.dots i{width:16px;height:16px;border-radius:50%;background:#3b4680;border:2px solid #f3d27a66}
+.dots i.on{background:#ffd76a;box-shadow:0 0 12px #ffd76a;width:44px;border-radius:10px}
+.dots i.done{background:#c8a24a}
+.sub{position:absolute;left:150px;right:170px;top:1222px;height:110px;display:flex;align-items:center;justify-content:center;text-align:center;
+ font:800 38px/1.2 'Be Vietnam Pro';color:#fff;-webkit-text-stroke:6px #050820;paint-order:stroke fill}
+.foot{position:absolute;top:1338px;left:0;right:0;text-align:center;font:700 24px 'Be Vietnam Pro';color:#f3d27a99;letter-spacing:4px}
+</style></head><body>
+<div id="bgl"><div class="stars"></div><div class="halo"></div></div>
+<div class="kick">SƯ PHỤ GIẢNG</div>
+<div class="title"><div>Ý nghĩa ngày</div><div class="big">Thập Bát Trăng Mười</div></div>
+<div class="chip">🌕 18 tháng 10 âm lịch • Ngày của Mẹ</div>
+<div class="frame" id="frame"><img id="bg" style="width:100%;height:100%;object-fit:cover"></div>
+<div class="card"><div class="num" id="num"></div><div class="ico" id="ico"></div><div class="ct"><h2 id="h"></h2><p id="d"></p></div></div>
+<div class="dots" id="dots"></div>
+<div class="sub" id="sub"></div>
+<script>
+const P=[["🌍","Ngày của <b>Mẹ</b> – ngày của <b>Địa Cầu</b>","Ngày Phật Mẫu. Bên Mỹ gọi là Earth Day – Ngày Trái Đất"],
+["👫","<b>Adam & Eva</b> đặt chân xuống trái đất","Những người đầu tiên từ cõi Trời xuống, 300 – 400 nghìn năm trước"],
+["🐒","Con người <b>không</b> từ khỉ mà ra","Khỉ ngàn năm vẫn là khỉ – người từ cõi Quang Âm Thiên xuống đây"],
+["📜","Lễ nào cũng có <b>tích</b>, có <b>thật</b>","Không phải tự đặt ra. Đạo Cao Đài thờ Thượng Đế cũng hiểu điều này"],
+["✨","<b>12 người con</b> của Thượng Đế","Âu Châu, Do Thái thờ 12 người con – trùng với 12 anh em của Sư Phụ"]];
+const q=new URLSearchParams(location.search),k=+(q.get('k')||1),$=i=>document.getElementById(i);
+if(q.get('bg'))$('bg').src=q.get('bg'); else {$('bg').remove();const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='1080' height='1440'><path fill-rule='evenodd' d='M0 0H1080V1440H0Z M156 397H924A21 21 0 0 1 945 418V836A21 21 0 0 1 924 857H156A21 21 0 0 1 135 836V418A21 21 0 0 1 156 397Z'/></svg>`;
+ const u='url("data:image/svg+xml,'+encodeURIComponent(svg)+'")';$('bgl').style.webkitMaskImage=u;$('bgl').style.maskImage=u;}
+const [e,h,d]=P[k-1];$('num').textContent='Ý '+k+' / '+P.length;$('ico').textContent=e;$('h').innerHTML=h;$('d').textContent=d;
+$('sub').textContent=q.get('sub')||'';
+{const el=document.querySelector(".title .big");let f=80;while(el.scrollWidth>780&&f>40){f-=2;el.style.fontSize=f+"px"}}
+P.forEach((_,i)=>{const t=document.createElement('i');t.className=i+1<k?'done':i+1==k?'on':'';$('dots').appendChild(t)});
+</script></body></html>
